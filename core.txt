@@ -1,12 +1,12 @@
 \m4_TLV_version 1d: tl-x.org
 \SV
    
-
+   //include libraries
    m4_include_lib(['https://raw.githubusercontent.com/stevehoover/warp-v_includes/1d1023ccf8e7b0a8cf8e8fc4f0a823ebb61008e3/risc-v_defs.tlv'])
    m4_include_lib(['https://raw.githubusercontent.com/stevehoover/LF-Building-a-RISC-V-CPU-Core/main/lib/risc-v_shell_lib.tlv'])
 
   
-   
+   //write your assembly program here (below is example program)
    m4_asm(ADDI, x14, x0, 0)             // Initialize sum register a4 with 0
    m4_asm(ADDI, x12, x0, 1010)          // Store count of 10 in register a2.
    m4_asm(ADDI, x13, x0, 1)             // Initialize loop count register a3 with 0
